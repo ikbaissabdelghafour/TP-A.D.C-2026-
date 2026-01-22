@@ -76,7 +76,7 @@ def Ex5():
     viral_cols = [col for col in df.select_dtypes(include='object').columns if col != target]
     # 1. pd.crosstab pour relation Target vs virus
     print("\n1. Relation Target vs Virus (crosstab):")
-    for virus in viral_cols[:2]:  # 2 premiers virus
+    for virus in viral_cols[:2]:  
         ct = pd.crosstab(df[target], df[virus])
         print(f"\n{virus}:\n{ct}") 
         sns.heatmap(ct, annot=True, fmt='d', cmap='YlOrRd')
@@ -96,7 +96,7 @@ def Ex5():
     print(comparison)
     sns.heatmap(comparison, annot=True, fmt='d', cmap='Blues')
     plt.title('COVID vs Autre virus')
-    plt.savefig('EX5_COVID vs Autre virus')
+    plt.savefig('Covide_Figures/EX5_COVID vs Autre virus')
     plt.show()
 
 def Ex6():
@@ -132,9 +132,9 @@ def Ex6():
     print('''Une p-value < 0,05 confirme une différence statistiquement significative entre groupes,
           cohérente avec les distributions décalées observées à l’exercice 4''')
     
-EX1()
-EX2()
-EX3()
-Ex4()
-Ex5()
+# EX1()
+# EX2()
+# EX3()
+# Ex4()
+# Ex5()
 Ex6()

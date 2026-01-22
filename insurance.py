@@ -10,14 +10,8 @@ print("structure des donnees :")
 print(df.info())
 print("\n", df.describe())
 print("\nvaleurs manquantes :", df.isnull().sum().sum())
-
-
-
-
 # 2. étude a : bmi vs région (anova)
-
 print("étude a : bmi depend-il de la region ?")
-
 # question 1 : boxplot
 plt.figure(figsize=(10, 5))
 sns.boxplot(data=df, x='region', y='bmi', palette='Set2')
